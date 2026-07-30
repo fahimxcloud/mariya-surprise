@@ -20,9 +20,56 @@ body{
 .background{
     position:fixed;
     inset:0;
-    z-index:-3;
+    z-index:-5;
+    overflow:hidden;
     background:
-    radial-gradient(circle at top,#0b4ea2 0%,#05152e 40%,#01050d 100%);
+    radial-gradient(circle at top,#3b82f6 0%,#0f172a 45%,#020617 100%);
+}
+
+.background::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:#2563eb;
+    border-radius:50%;
+    filter:blur(170px);
+    top:-250px;
+    left:-180px;
+    opacity:.35;
+    animation:moveGlow1 15s ease-in-out infinite alternate;
+}
+
+.background::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:#38bdf8;
+    border-radius:50%;
+    filter:blur(170px);
+    right:-180px;
+    bottom:-200px;
+    opacity:.25;
+    animation:moveGlow2 18s ease-in-out infinite alternate;
+}
+
+@keyframes moveGlow1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(120px,80px);
+    }
+}
+
+@keyframes moveGlow2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-100px,-80px);
+    }
 }
 
 /* Stars */
