@@ -138,6 +138,10 @@ animation-delay:.4s;
 }
 
 .subtitle{
+     opacity:0;
+transform:translateY(30px);
+animation:titleFade 1.5s ease forwards;
+animation-delay:1s;
     margin-top:25px;
     max-width:700px;
     color:#d7e9ff;
