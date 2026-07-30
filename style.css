@@ -152,6 +152,9 @@ animation-delay:1s;
 /* Button */
 
 #startBtn{
+    opacity:0;
+animation:titleFade 1.5s ease forwards;
+animation-delay:1.6s;
     margin-top:45px;
     padding:18px 45px;
     border:none;
