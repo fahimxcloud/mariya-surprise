@@ -4,6 +4,12 @@ const startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", () => {
 
+    confetti({
+        particleCount: 180,
+        spread: 90,
+        origin: { y: 0.6 }
+    });
+
     document.querySelector(".gallery").scrollIntoView({
         behavior: "smooth"
     });
